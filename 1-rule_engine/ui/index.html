@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rule Engine</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Rule Engine with AST</h1>
+
+  <!-- Form to create a new rule -->
+  <section>
+    <h2>Create a New Rule</h2>
+    <form id="ruleForm">
+      <label for="rule">Enter Rule:</label>
+      <input type="text" id="rule" name="rule" placeholder="e.g. (age > 30 AND department = 'Sales')" required>
+      <button type="submit">Submit Rule</button>
+    </form>
+  </section>
+
+  <hr>
+
+  <!-- Section to combine rules -->
+  <section>
+    <h2>Combine Rules</h2>
+    <form id="combineRulesForm">
+      <button type="button" id="combineBtn">Combine All Rules</button>
+    </form>
+  </section>
+
+  <hr>
+
+  <!-- Form to evaluate a rule -->
+  <section>
+    <h2>Evaluate Rule</h2>
+    <label for="ruleSelect">Select Rule to Evaluate:</label>
+    <select id="ruleSelect"></select>
+
+    <form id="evaluateForm">
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" placeholder="Enter age" required>
+
+      <label for="department">Department:</label>
+      <input type="text" id="department" name="department" placeholder="Enter department" required>
+
+      <label for="salary">Salary:</label>
+      <input type="number" id="salary" name="salary" placeholder="Enter salary" required>
+
+      <label for="experience">Experience:</label>
+      <input type="number" id="experience" name="experience" placeholder="Enter experience" required>
+
+      <button type="submit">Evaluate</button>
+    </form>
+  </section>
+
+  <hr>
+
+  <!-- Display Evaluation Result -->
+  <section id="resultSection">
+    <h2>Evaluation Result</h2>
+    <div id="result"></div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
